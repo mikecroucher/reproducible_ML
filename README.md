@@ -17,7 +17,7 @@ The slides are in **presentation/index.html**. On your local macginem, Navigate 
 
 **Academic Papers**
 
-* [The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://link.springer.com/article/10.1007/s10115-016-1004-2) - Demonstrating that the difference between the best and worst implementations of ML aglgorithms can be more than **10,000 times**. Even when only considering mature frameworks
+* [The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://link.springer.com/article/10.1007/s10115-016-1004-2) - Demonstrating that the difference between the best and worst implementations of ML algorithms can be more than **10,000 times**. Even when only considering mature frameworks
 
 ## Version Control - Learn git
 
