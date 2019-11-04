@@ -21,8 +21,10 @@ The slides are in **presentation/index.html**. On your local macginem, Navigate 
 
 ## Version Control - Learn git
 
+* [XKCD comic discusses git](https://explainxkcd.com/wiki/index.php/1597:_Git)
 * [Software Carpentry lesson on git](http://swcarpentry.github.io/git-novice/)
 * [Download and install git](https://git-scm.com/)
+* [GitLab](https://about.gitlab.com/) - GitLab. If you need to host your own in-house replacement for GitHub.
 
 ## Environments - conda cheatsheet
 
