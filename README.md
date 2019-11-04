@@ -2,7 +2,7 @@
 
 # Slides
 
-The slides are in **presentation/index.html**. Navigate to that folder and open index.html in a browser.
+The slides are in **presentation/index.html**. On your local macginem, Navigate to that folder and open index.html in a browser.  See the online version at 
 
 # External resources
 
