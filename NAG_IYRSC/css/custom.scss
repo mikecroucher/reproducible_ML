@@ -1,0 +1,70 @@
+/* Custom colours */
+/* Used this palette as a rough guide: https://www.design-seeds.com/tag/charcoal/page/8/
+'cause you know I love colour palettes */
+$white: #fff;
+$yellow: #FFC300;
+$pale-blue: #C5D4DB;
+$charcoal: #303239;
+
+
+/*Custom font*/
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+$base-font: 'Ropa Sans', sans-serif;
+
+.reveal{
+  font-family: $base-font;
+}
+
+/* Custom text styles */
+/* These are general classes so can be added to
+any text in the slides e.g. <h2> <style> Fancy thingy </style> </h2>*/
+
+.reveal embossed{
+  color: $white;
+  text-shadow: 0 -3px 0 $charcoal;
+}
+
+.reveal glow{
+  text-shadow: 0px 0px 5px $white;
+  color: $white;
+  padding: 0 2rem;
+}
+
+/* Adding extra glow class to headings (nb this is a big glow) */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  &.glow{
+    text-shadow: 0px 0px 5px #fff, 0 0 30px $pale-blue;
+    color: $white;
+    padding: 0 2rem;
+    font-family: $base-font;
+  }
+}
+
+/* Changing the links colour and behaviour */
+.reveal a{
+  color: $yellow;
+  &:hover{
+    color: darken($yellow, 5%);
+    font-weight: bold;
+  }
+}
+
+/*Flushing text to either side */
+.right{
+left: 50%;
+padding: 10px;
+position: fixed;
+top: 30%
+}
+
+.left{
+right: 50%;
+padding: 10px;
+position: fixed;
+top: 30%
+}
