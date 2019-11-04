@@ -1,0 +1,733 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Is Your Research Software Correct?</title>
+
+		<meta name="description" content="Good enough practice in Data Science">
+		<meta name="author" content="Michael Croucher">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+					<section data-background="background.png">
+							<h2 class='glow'>Good enough practice in Data Science</h2>
+		
+							<p>Mike Croucher</p>
+								<p>Developer Advocate</p>
+														<a href="http://twitter.com/walkingrandomly">@walkingrandomly and @NAGTalk</a>
+														<br>
+														<a href="mailto:Michael.Croucher@nag.co.uk">Michael.Croucher@nag.co.uk</a>
+														<br>
+														<a href="http://rse.shef.ac.uk/">Numerical Algorithms Group</a>
+							</p>
+						</section>
+
+
+						
+
+
+						<section data-background="background.png">
+							<h2 class='glow'>Imagine... </h2>
+							<h2 class="fragment fade-in">Your results are amazing!</h2>
+							<h2 class="fragment fade-in">but wrong</h2>
+						</section>
+						<section data-background="ExcelError.png" data-background-size="contain">
+						</section>
+		
+						<section data-background="background.png">
+						<h2 class='glow'>Mike Konczal</h2>
+					<blockquote cite="Mike Konczal">&ldquo;all I can hope is that future historians note that one of the core empirical points providing the intellectual foundation for the global move to austerity in the early 2010s was based on someone accidentally not updating a row formula in Excel&rdquo;</blockquote>
+						</section>
+		
+					<section data-background="background.png">
+					<h2 class='glow'>What were the real errors?</h2>
+					<ul>
+						<li class="fragment fade-in">They used Excel (subject to debate)</li>
+						<li class="fragment fade-in">They didn't share their code and data (Vital!)</li>
+					</ul>
+					</section>
+		
+					<!--Choose from a selection of these examples. Too many to do them all-->
+		
+					 <!--Added the next 2 slides for a Bioinformatics conference-->
+					<section data-background="genomics_excel.png" data-background-size="contain">
+					</section>
+					<section data-background="genomics_excel2.png" data-background-size="contain">
+					</section>
+		
+					<section data-background="ethiopian_genome.png" data-background-size="contain">
+					</section>
+					<section data-background="microarray.png" data-background-size="contain">
+					</section>
+		
+						<section data-background="Chang.png" data-background-size="contain">
+						</section>
+		
+						<section data-background="background.png">
+					 <section data-background="Worms1.png" data-background-size="contain">	</section>
+						<section data-background="background.png">
+							<ul>
+							<p>This 2003 trial, done in Kenya, found that deworming whole schools improved children’s health, school performance, and school attendance.</p>
+							<p class="fragment fade-in">In 2013, the data was reanalysed independently using new computer programs</p>
+							<p class="fragment fade-in">Many mistakes found.</p>
+						</ul>
+						</section>
+		
+						<section data-background="Worms2.png" data-background-size="contain">	</section>
+		
+						</section>
+		
+						<section data-background="FreeSurfer.png" data-background-size="contain">	</section>
+		
+						<section data-background="background.png">
+							<h2 class='glow'>Further examples</h2>
+							<ul>
+								<li><a href="https://www.timeshighereducation.com/news/papers-in-economics-not-reproducible">Papers in economics ‘not reproducible’</a></li>
+								<li><a href="http://www.around.com/ariane.html">Exploding rocket: $7 Billion software bug</a></li>
+								<li><a href="http://www.bbc.co.uk/news/technology-35167191">US prisoners released early by software bug</a></li>
+								<li><a href="http://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0649-6">Erratum to: DNA methylation age of human tissues and cell types</a></li>
+							</ul>
+						</section>
+		
+						<section data-background="background.png">
+							<h2 class='glow' >We have a problem!</h2>
+							<img src="problem.gif" width="600" height="512">
+						</section>
+		
+						<section data-background="background.png">
+							<h1 class='glow'>Croucher's law</h1>
+							<h2 class="fragment fade-in">I can be an idiot and WILL make mistakes.</h2>
+							<h2 class="fragment fade-in">You are no different!</2>
+						</section>
+		
+						<section data-background="background.png">
+							<h1 class='glow'>Your Analysis?</h1>
+							<h3 class="fragment fade-in">What you did</h3>
+							<p class="fragment fade-in">Open package foo. Click, Click, drag, Click, Click, Click, Right-Click, Save, 'results.csv'.</p>
+							<p class="fragment fade-in">Load into Excel. Click, drag, generate graph, right click, save, 'pretty-graph.png'</p>
+						</section>
+						<section data-background="background.png">
+							<h1 class='glow'>Your Analysis?</h1>
+							<h3>What you said</h3>
+							<p> I analysed my data in foo using the bar analysis. Here's a graph of the results.<p>
+						</section>
+						<section data-background="background.png">
+							<h1 class='glow'>How reproducible is a mouse click?</h1>
+						</section>
+
+					<section data-background="background.png">
+						<h1 class='glow'>Automate</h1>
+						<p class="fragment fade-in">aka 'learn to program'</p>
+					</section>
+					<section data-background="background.png">
+						<p><font size="36">The Ideal</font></p>
+						<p class="fragment fade-in"><font size="36">Results = TheAnalysis(MyData)</font></p>
+						<img src="domino_success.gif" class="fragment fade-in">
+					</section>
+					<section data-background="background.png">
+						<p><font size="36">Reality</font></p>
+						<img src="domino_one.gif" class="fragment fade-in">
+					</section>
+				</section>
+		
+				<section data-background="background.png">
+					<h2>Problem</h2>
+						<h3>I am an idiot and will make mistakes</h3>
+		
+					<p>(Partial) Solutions
+						<ul>
+							<li>Automate (aka learn to program)
+						</ul>
+				</section>
+		
+					<section data-background="background.png">
+						<p>Write code in a (very) high-level language</p>
+						<a href="https://imgs.xkcd.com/comics/python.png"><img src="https://imgs.xkcd.com/comics/python.png" class="fragment fade-in"></a>
+					</section>
+		
+					<section data-background="background.png">
+						<h2 class='glow'>Some suggested languages</h2>
+						<ul>
+							<li>Python</li>
+							<li>MATLAB</li>
+							<li>R</li>
+							<li>Julia</li>
+						</ul>
+					</section>
+					<section data-background="background.png">
+						<h2>Why high level languages?</h2>
+						"Programmers write roughly the same number of lines of code per unit time regardless of the language they use" (Best Practices for Scientific Computing, PLOS Biology, Wilson Et Al)
+					</section>
+					<section data-background="background.png">
+						<h2 class='glow'>What about speed?</h2>
+						<ol>
+							<li class="fragment fade-in"> Computer time is cheap. Programmer time is expensive.
+							<li class="fragment fade-in"> We all have supercomputers now!
+							<li class="fragment fade-in"> Ensure it's correct, then worry about speed.
+							<li class="fragment fade-in"> Call NAG to help with the slow bits</a>
+							</ol>
+					</section>
+				
+					<section data-background="hpc_services.png" data-background-size="contain"></section>
+		
+				<section data-background="background.png">
+					<h2>Problem</h2>
+						<h3>I am an idiot and will make mistakes</h3>
+		
+					<p>(Partial) Solutions
+						<ul>
+							<li>Automate (aka learn to program)
+							<li>Write code in a (very) high-level language
+						</ul>
+				</section>
+
+				<section data-background="background.png">
+					<h2>Share your code and data openly<div class="fragment fade-in">(As possible)</div></h2>
+					<p class="fragment fade-in"><img src="panda.gif" width="315" height="350"></p>
+				</section>
+
+				<section data-background="background.png">
+						<h2 class='glow'>Openly as possible?</h2>
+						<p class="fragment fade=in">If can't be fully open, be as open as possible within your organisation</p>
+				</section>
+
+				<section data-background="background.png">
+					<h2 class='glow'>Why share the code and data?</h2>
+					<p class="fragment fade=in">Nothing else contains the information required to fully reproduce your work.</p>
+				</section>
+
+
+				<section data-background="data_to_cluster.png" data-background-size="contain"></section>
+				<section data-background="background.png">
+					<h2 class='glow'>You say</h2>
+					<p class="fragment fade=in">We use K-means in Python with 50 clusters and K-means++ initialisation</p>
+					<img src="kmeans_onesol.png" class="fragment fade-in">
+				</section>
+
+				<section data-background="background.png">
+					<h2 class='glow'>You say</h2>
+					<p>No need to share code. It's 2 lines. Trivial!</p>
+					<img src="kmeans_onesol.png">
+				</section>
+
+				<section data-background="background.png">
+					<h2 class='glow'>My results</h2>
+					<p>Also took me 2 lines of Python</p>
+					<img src="kmeans_comparison.png">
+				</section>
+
+				<section data-background="background.png">
+					<h2 class='glow'>My results</h2>
+					<p>Several differences</p>
+					<img src="kmeans_differences.jpg">
+				</section>
+
+				<section data-background="background.png">
+						<h2 class='glow'>My results</h2>
+						<p>We used different libraries</p>
+						<img src="kmeans_final.png">
+				</section>
+
+				<section data-background="background.png">
+						<h2 class='glow'>Code comparison</h2>
+						<img src="kmeans_code.png">
+				</section>
+
+				<section data-background="background.png">
+						<h2 class='glow'>Production workflow</h2>
+						<p>Imagine how many gotchas there might be here</p>
+						<img src="wires.gif">
+				</section>
+
+				<section data-background="background.png">
+						<h2>Problem</h2>
+							<h3>I am an idiot and will make mistakes</h3>
+				
+						<p>(Partial) Solutions
+							<ul>
+								<li>Automate (aka learn to program)
+								<li>Write code in a (very) high-level language
+								<li>Share code and data
+							</ul>
+					</section>
+
+		
+				<section data-background="background.png">
+					<h2 class='glow'>Use version control</h2>
+				</section>
+				<section data-background="background.png">
+					<h1 class='glow'>Is this familiar?</h1>
+					<ul>
+					<li> code_ver1.m
+					<li> code_ver1b_BROKEN.m
+					<li> code_ver1b_BROKEN_Working_march20.m
+					<li> code_ver1b_BROKEN_Working_march20_Bobs_mods_ForMike.m
+					</ul>
+				</section>
+				<section data-background="background.png">
+					<h2>Which version did the results come from?</h2>
+				</section>
+				<section data-background="background.png">
+					<h2>What broke the code?</h2>
+				</section>
+				<section data-background="background.png">
+					<h2>Team co-ordination</h2>
+				</section>
+				<section data-background="background.png">
+					<h2>Taking you back to your happy place</h2>
+				</section>
+				<section data-background="background.png">
+					<h2>Demo</h2>
+					<p><a href="https://github.com/mikecroucher/Bobs_code">https://github.com/mikecroucher/Bobs_code</a></p>
+				</section>
+			<section data-background="background.png">
+				<h2 class='glow'>True Story </h2>
+				<ul>
+					<li class="fragment fade=in"> Me: Can I see the code please?
+					<li class="fragment fade=in"> Them: I'll just get the changes from Bob folded in and email it
+					<li class="fragment fade=in"> Me: Shouldn't we be using version control?
+					<li class="fragment fade=in"> Them: No need - it's overkill. We don't have a VC problem.
+					<li class="fragment fade=in"> Me: The code you sent me doesn't work
+					<li class="fragment fade=in"> Them: Sorry. I sent the wrong version.
+				</ul>
+			</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Use git!</h2>
+					<p class="fragment fade=in">They say: It's too much extra work</p>
+					<img src="dont_want_to.gif">
+			</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Main git workflow</h2>
+					<h3 class='glow'>Just 3 commands</h2>
+					<p>Do work on file1, file2 and file6</p>
+					<code>				
+<pre>git add file1 file1 file6
+git commit -m "Description of why you modified those files"
+git push origin master</pre>
+					</code>
+			</section>
+			
+				<section data-background="background.png">
+				<h2 class='glow'>The version control life cycle</h2>
+					<ol>
+					<li> git? No thanks, I'm scared!
+					<li> well this is handy.
+					<li> we're not using git? I'm scared!
+					</ol>
+					<p>source: <a href="https://twitter.com/bobearth/status/571154995506122755">https://twitter.com/bobearth/status/571154995506122755</a> </p>
+		</section>
+
+		<section>
+		DIFFERENCE BETWEEN GITHUB,AND GIT.  MENTION GITLAB FOR SENSITIVE DATA
+		
+		RESOURCES FOR LEARNING GIT
+
+		ADD-ONS FOR GITHUB. CLOUD DEPLOYMENT. NOTEBOOK RENDERING. CI. AND SO ON
+		</section>
+
+		<section data-background="background.png">
+				<h2>Problem</h2>
+					<h3>I am an idiot and will make mistakes</h3>
+		
+				<p>(Partial) Solutions
+					<ul>
+						<li>Automate (aka learn to program)
+						<li>Write code in a (very) high-level language
+						<li>Share code and data
+						<li>Use version control
+					</ul>
+			</section>
+
+		<section data-background="background.png">
+				<h2>Environment</h2>
+					<p>Colleauge sends you this</p>
+				<img class="stretch" src="working_pca.png">			
+		</section>
+
+		<section data-background="background.png">
+				<h2>Environment</h2>
+					<p>Your experience</p>
+				<img class="stretch" src="broken_pca.png">			
+		</section>
+		
+		<section data-background="why_pca_broken.png" data-background-size="contain">
+			</section>
+		
+			<section data-background="background.png">
+					<h2 class='glow'>Production</h2>
+					<p>Think of all those constantly shifting dependencies</p>
+					<img src="wires.gif">
+			</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Describe your environment</h2>
+					<p>...and control it with Conda</p>
+					<p>Install Miniconda from <a href="https://repo.continuum.io/miniconda/">https://repo.continuum.io/miniconda/</a></p>
+			</section>
+
+			<section data-background="background.png">
+				<p>Running our PCA example</p>
+				<p>You are told it works using scikit-learn 0.17></p>
+				<code><pre>
+conda create --name pca_project python=3.5 scikit-learn=0.17 jupyter
+conda activate pca_project
+jupyter notebook</pre>
+				</code>
+			</section>
+			
+
+			<section data-background="background.png">
+				<h2>Get a code buddy (Code Review Light)</h2>
+				<p class="fragment fade-in"> Doesn't have to understand your research</p>
+				<p class="fragment fade-in"> Remit: Tell me where I could do better?</p>
+				<p class="fragment fade-in"> Problem 1: Get the code running on THEIR machine</p>
+			</section>
+			<section data-background="background.png">
+				<h2 class='glow'>Get a code buddy</h2>
+				<img class="fragment fade-in" src="wtfm.jpg">
+			</section>
+		
+		<section data-background="background.png">
+			<h2>Problem</h2>
+				<h3>I am an idiot and will make mistakes</h3>
+		
+			<p>(Partial) Solutions</p>
+				<ul>
+					<li>Automate (aka learn to program)
+					<li>Write code in a (very) high-level language
+					<li>Share code and data
+					<li>Use version control
+					<li>Get a code buddy
+				</ul>
+		</section>
+
+				<section data-background="background.png">
+					<h2 class='glow'>Literate computing</h2>
+					<p>Traditional reports are just advertisements</p>
+				</section>
+		
+					<section data-background="LIGO_paper.png" data-background-size="contain">
+					</section>
+		
+					<section data-background="LIGO_notebook.png" data-background-size="contain">
+					</section>
+		
+					<section data-background="background.png">
+						<p>A Literate computing document IS the research</p>
+					</section>
+		
+					<section data-background="background.png">
+						<h2>Literate computing technologies</h2>
+						<ul>
+							<li><a href="http://jupyter.org/">Jupyter notebook</a></li>
+							<li><a href="http://rmarkdown.rstudio.com/">R Markdown</a></li>
+							<li><a href="https://www.mathworks.com/help/matlab/matlab_prog/what-is-a-live-script.html">MATLAB Live scripts</a></li>
+						</ul>
+					</section>
+		
+				<section data-background="background.png">
+					<h2>Problem</h2>
+						<h3>I am an idiot and will make mistakes</h3>
+		
+					<p>(Partial) Solutions
+						<ul>
+							<li>Automate (aka learn to program)
+							<li>Write code in a (very) high-level language
+							<li>Get some training
+							<li>Use version control
+							<li>Get a code buddy 
+							<li>Share your code and data openly
+							<li>Use literate computing technologies</li>
+						</ul>
+				</section>
+		
+					<section data-background="background.png">
+						<h2 class='glow'>Afraid to change your code?</h2>
+						<img src="domino_fail.gif" class="fragment fade-in">
+					</section>
+		
+	
+						<section data-background="background.png">
+							<h2 class='glow'>Write tests</h2>
+							<ul>
+								<li>Every decent language has a testing framework
+								<li>Learn how to use it
+								<li>You write additional code that ensures your code gives the answers you expect
+								<li>Tests give you confidence to make changes
+							</ul>
+						</section>
+
+						<section data-background="background.png">
+		
+		<pre><code>
+		$ nosetests ./unittests.py
+		..............................
+		----------------------------------------------------------------------
+		Ran 30 tests in 0.152s
+		
+		OK
+		</code></pre>
+		</section>
+		
+					<section data-background="jdcook_tweet.png" data-background-size="contain">
+					</section>
+				</section>
+		
+		<section data-background="background.png">
+				<h2>Problem</h2>
+					<h3>I am an idiot and will make mistakes</h3>
+		
+				<p>(Partial) Solutions
+					<ul>
+						<li>Automate (aka learn to program)
+						<li>Write code in a (very) high-level language
+						<li>Get some training
+						<li>Use version control
+						<li>Get a code buddy 
+						<li>Share your code and data openly
+						<li>Use literate computing technologies</li>
+						<li>Write tests
+					</ul>
+			</section>
+		
+			<section data-background="background.png">
+			<h2 class='glow'>Numerical Computing is hard!</h2>
+		 </section>
+
+		 <section data-background="background.png">
+				<h2 class='glow'>Hypothenuse of a triangle</h2>
+				  <p class="fragment fade-in">Easy!</p>
+					<p class="fragment fade-in">h = sqrt(x*x + y*y)</p>
+					<p class="fragment fade-in">So why is the hypot function in math.h, Python and MATLAB?</p>
+			</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>A better hypot</h2>
+					<code>
+						<p>
+						<pre>
+max = maximum(|x|, |y|)
+min = minimum(|x|, |y|)
+r = min / max
+return max*sqrt(1 + r*r)
+				</pre>
+					</code>
+					</section></p>
+			</section>
+
+    <section data-background="background.png">
+				<h2 class='glow'>Real-world hypot</h2>
+				<p>openlibm - 132 lines of code</p>
+				<p><a href="https://github.com/JuliaMath/openlibm/blob/master/src/e_hypot.c">https://github.com/JuliaMath/openlibm/blob/master/src/e_hypot.c</a> </p>
+		</section>
+
+		<section data-background="openlibm_hypot.png"></section>
+		
+		<section data-background="background.png">
+				<h2 class='glow'>A story of sin(x)</h2>
+				<p class="fragment fade-in">Who do the experts go to for help?</p>
+</section>
+
+			<section data-background="original_sin.png" data-background-size="contain"></section>
+			<section data-background="new_sin.png" data-background-size="contain">	</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Numerical Computing is hard!</h2>
+					<p class="fragment fade-in">....and it's getting harder!</p>
+	</section>
+
+	<section data-background="background.png">
+			<h2 class='glow'>Parallelisation and adding up</h2>
+			<p>ans = 0.1 + 0.2 + 0.3</p>
+			<p>order matters!</p>
+</section>
+
+<section data-background="background.png">	
+				<h2 class='glow'>order matters</h2>
+				<p class="fragment fade-in">x = (0.1+0.2) + 0.3 = 0.60000000000000009</p>
+        <p class="fragment fade-in">y = 0.1 + (0.2+0.3) = 0.59999999999999998</p>
+</section>
+
+<section data-background="local_opt.png" data-background-size="contain"></section>
+
+<section data-background="background.png">
+	
+		<h2 class='glow'>Technological drivers</h2>
+		<ul>
+		<li class="fragment fade-in"> Many core parallelism</li>
+		<li class="fragment fade-in"> Low precision arithmetic</li>
+		<li class="fragment fade-in"> Vectorisation</li>
+		<li class="fragment fade-in"> Exotic hardware</li>
+		</ul>
+
+</section>
+
+<section data-background="background.png">
+	
+		<h2 class='glow'>Use a quality numerical library</h2>
+</section>
+
+<section data-background="nag_library.png" data-background-size="contain"></section>
+
+<section data-background="background.png">
+	
+		<h2 class='glow'>The NAG Library</h2>
+		<p>1900+ routines</p>
+		<p>Python, MATLAB, C, C++, Java, Fortran etc etc</p>
+</section>
+		
+						<section data-background="background.png">
+		
+				<p>(Partial) Solutions
+					<ul>
+						<li>Automate (aka learn to program)
+						<li>Write code in a (very) high-level language
+						<li>Get some training
+						<li>Use version control
+						<li>Get a code buddy 
+						<li>Share your code and data openly
+						<li>Use literate computing technologies</li>
+						<li>Write tests
+						<li>Use a quality numerical library</li>
+					</ul>
+			</section>
+		
+			<section data-background="background.png">
+			 <h2 class='glow'>Is this enough?</h2>
+			 <p class="fragment fade-in">No!</p>
+			</section>
+		
+			<!--Mesh generation, boundary conditions, differences in the external libraries used for solving linear systems: all these aspects can lead to a simulation going awry.-->
+			<section data-background="lorena.png" data-background-size="contain">
+			</section>
+		
+			<section data-background="gwilson.png" data-background-size="contain">
+			</section>
+		
+			<section data-background="background.png">
+			 <h2>You are not alone!</h2>
+			</section>
+
+			<section data-background="background.png">
+					<h2>NAG</h2>
+					<ul>
+							<li class="fragment fade-in">Consultancy (We help you do stuff)
+							<li class="fragment fade-in">Products (We build stuff)
+							<li class="fragment fade-in">Training (We teach you stuff)
+							<li class="fragment fade-in">Research (We develop new stuff)
+							<li class="fragment fade-in">Open source (We give some stuff away)
+							<li class="fragment fade-in">Community
+					</ul>
+				 </section>
+
+				 <section data-background="who_are_NAG.png" data-background-size="contain">
+				</section>
+				<section data-background="NAG_services_products.png" data-background-size="contain">
+				</section>
+				<section data-background="library_contents.png" data-background-size="contain">
+				</section>
+				<section data-background="NAG_users.png" data-background-size="contain">
+				</section>
+				<section data-background="NAG_HPC_Services.png" data-background-size="contain">
+				</section>
+				<section data-background="NAG_PoP.png" data-background-size="contain">
+				</section>
+
+
+				<section data-background="background.png">
+					<h2>NAG - Some Academic Collaborations</h2>
+					<ul>
+						<li class="fragment fade-in">Your University (Your research)	
+						<li class="fragment fade-in">University of Oxford (Mathematical Optimisation)
+							<li class="fragment fade-in">University of Manchester (Accelerated Linear Algebra)
+						    <li class="fragment fade-in">University of Lancaster (wavelet models)			
+							<li class="fragment fade-in">University of Sheffield (ML - Clustering)
+							<li class="fragment fade-in">RWTH Aachen University (Algorithmic Differentiation)
+							<li class="fragment fade-in">QMUL (Implied Volatility)
+							
+							
+					</ul>
+				 </section>
+
+			<section data-background="nag.png" data-background-size="contain">
+				</section>
+		
+					<section data-background="background.png">
+						Link to these slides: <a href="https://mikecroucher.github.io/NAG_IYRSC/">https://mikecroucher.github.io/NAG_IYRSC/</a>
+					</section>
+		
+					<section data-background="background.png">
+						<h2>Where my ideas came from</h2>
+						<ul>
+							<li><a href="http://www.walkingrandomly.com/?p=5825">My blog post, from which this talk grew.</a>
+							<li><a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a> - Wilson et al. Go here for more advanced tips.
+							<li><a href="http://researchinprogress.tumblr.com/">Research In Progress</a> - Most of the animated gifs</li>
+							<li><a href="http://phdcomics.com/comics.php">Phd Comics</a> - Finding humour in the academic way of life
+							<li><a href="http://xkcd.com/">xkcd</a> - A webcomic of romance, sarcasm, math, and language.
+							<li><a href="http://www.buzzfeed.com/bengoldacre/deworming-trials">Scientists Are Hoarding Data And It’s Ruining Medical Research</a> - Ben Goldacre
+							<li><a href="http://blog.fperez.org/2013/04/literate-computing-and-computational.html">"Literate Computing" and computational reproducibility- Fernando Perez</a>
+						<li><a href="https://www.johndcook.com/blog/2010/06/02/whats-so-hard-about-finding-a-hypotenuse/">What's so hard about finding a hypotenuse?</a></li>
+							</ul>
+					</section>
+		
+					<section data-background="background.png">
+					<h2>Where my ideas came from: Twitter</h2>
+					<ul>
+						<li><a href="https://twitter.com/BramStolk/status/665941791921737728">How reproducible is a mouse click?</a>
+						<li><a href="https://twitter.com/IanHawke/status/664081682480373760">The gulf between the scientific computing "elite" and those emailing spreadsheets is growing, and that's bad.</a>
+					</ul>
+				</section>
+		
+					<section data-background="background.png">
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="https://software-carpentry.org/">Software Carpentry</a> - Learn the craft
+							<li><a href="http://pythontesting.net/">Python Testing</a> - Everything you need to know about writing tests in Python
+							<li><a href="https://www.youtube.com/watch?v=T0BE9ApIegc">Version Control and Unit Testing for Scientific Software, SciPy2013 Video Tutorial.</a>
+							<li><a href="http://www.software.ac.uk/blog/2013-09-27-how-do-we-know-research-software-correct">How do we know Research Software is Correct?</a> From the software sustainability institute
+						</ul>
+					</sectio>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, history: true,callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
