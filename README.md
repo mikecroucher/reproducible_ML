@@ -1,15 +1,32 @@
 # Reproducible data science
 
-# Slides
+## Slides
 
 The slides are in **presentation/index.html**. On your local macginem, Navigate to that folder and open index.html in a browser.  See the online version at 
 
-# External resources
+## External resources
 
-* [https://github.com/mikecroucher/pca_demo](PCA_demo) The PCA demonstration used to motivate sharing of environments
-* [https://github.com/mikecroucher/Bobs_code](Bob's repo) Repo created from the slide motivating the use of version control
+**GitHub Repos**
+
+* [PCA_demo](https://github.com/mikecroucher/pca_demo) The PCA demonstration used to motivate sharing of environments
+* [Bob's repo](https://github.com/mikecroucher/Bobs_code]) Repo created from the slide motivating the use of version control
+
+**NAG Numerical Library**
+
+* [NAG Library for Python](https://www.nag.co.uk/nag-library-python)- All MLI delegates can have a free, personal-use license for one-year
+
+**Academic Papers**
+
+* [The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://link.springer.com/article/10.1007/s10115-016-1004-2) - Demonstrating that the difference between the best and worst implementations of ML aglgorithms can be more than **10,000 times**. Even when only considering mature frameworks
+
+## Version Control - Learn git
+
+* [Software Carpentry lesson on git](http://swcarpentry.github.io/git-novice/)
+* [Download and install git](https://git-scm.com/)
 
 ## Environments - conda cheatsheet
+
+Download miniconda at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 
 ### Listing and using installed environments
 
