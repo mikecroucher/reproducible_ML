@@ -26,6 +26,7 @@ The slides are in **presentation/index.html**. On your local macginem, Navigate 
 * [Software Carpentry lesson on git](http://swcarpentry.github.io/git-novice/)
 * [Download and install git](https://git-scm.com/)
 * [GitLab](https://about.gitlab.com/) - GitLab. If you need to host your own in-house replacement for GitHub.
+* [Oh Shit! Git](https://ohshitgit.com/) - Hardly anyone knows how to use all of git.  What we do is use the same few commands and google our way out of trouble when things go wrong.  This site covers many cases that you'll run into in practice
 
 ## Environments - conda cheatsheet
 
