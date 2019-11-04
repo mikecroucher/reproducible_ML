@@ -1,5 +1,14 @@
 # Reproducible data science
 
+# Slides
+
+The slides are in **presentation/index.html**. Navigate to that folder and open index.html in a browser.
+
+# External resources
+
+* [https://github.com/mikecroucher/pca_demo](PCA_demo) The PCA demonstration used to motivate sharing of environments
+* [https://github.com/mikecroucher/Bobs_code](Bob's repo) Repo created from the slide motivating the use of version control
+
 ## Environments - conda cheatsheet
 
 ### Listing and using installed environments
