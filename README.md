@@ -1,8 +1,10 @@
 # Reproducible data science
 
+![NAG Logo](./nag_logo.png)
+
 ## Slides
 
-The slides are in **presentation/index.html**. On your local macginem, Navigate to that folder and open index.html in a browser.  See the online version at 
+The slides are in **presentation/index.html**. On your local macginem, Navigate to that folder and open index.html in a browser.  See the online version at https://mikecroucher.github.io/reproducible_ML/
 
 ## External resources
 
