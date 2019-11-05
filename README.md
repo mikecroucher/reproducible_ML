@@ -1,6 +1,38 @@
 # Reproducible data science
 
+![NAG Logo](./nag_logo.png)
+
+## Slides
+
+The slides are in **presentation/index.html**. On your local macginem, Navigate to that folder and open index.html in a browser.  See the online version at https://mikecroucher.github.io/reproducible_ML/
+
+## External resources
+
+**GitHub Repos**
+
+* [PCA_demo](https://github.com/mikecroucher/pca_demo) The PCA demonstration used to motivate sharing of environments
+* [Bob's repo](https://github.com/mikecroucher/Bobs_code]) Repo created from the slide motivating the use of version control
+
+**NAG Numerical Library**
+
+* [NAG Library for Python](https://www.nag.co.uk/nag-library-python)- All MLI delegates can have a free, personal-use license for one-year
+
+**Academic Papers**
+
+* [The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://link.springer.com/article/10.1007/s10115-016-1004-2) - Demonstrating that the difference between the best and worst implementations of ML algorithms can be more than **10,000 times**. Even when only considering mature frameworks
+* [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
+
+## Version Control - Learn git
+
+* [XKCD comic discusses git](https://explainxkcd.com/wiki/index.php/1597:_Git)
+* [Software Carpentry lesson on git](http://swcarpentry.github.io/git-novice/)
+* [Download and install git](https://git-scm.com/)
+* [GitLab](https://about.gitlab.com/) - GitLab. If you need to host your own in-house replacement for GitHub.
+* [Oh Shit! Git](https://ohshitgit.com/) - Hardly anyone knows how to use all of git.  What we do is use the same few commands and google our way out of trouble when things go wrong.  This site covers many cases that you'll run into in practice
+
 ## Environments - conda cheatsheet
+
+Download miniconda at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 
 ### Listing and using installed environments
 
