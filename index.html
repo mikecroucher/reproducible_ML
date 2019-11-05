@@ -37,7 +37,7 @@
 														<br>
 														<a href="mailto:Michael.Croucher@nag.co.uk">Michael.Croucher@nag.co.uk</a>
 														<br>
-														<a href="http://rse.shef.ac.uk/">Numerical Algorithms Group</a>
+														<a href="https://www.linkedin.com/in/mike-croucher-32336113/">https://www.linkedin.com/in/mike-croucher-32336113/</a>
 							</p>
 						</section>
 
@@ -327,6 +327,26 @@ git commit -m "Description of why you modified those files"
 git push origin master</pre>
 					</code>
 			</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Can't use GitHub?</h2>
+					<p>Speak to IT about installing an in-house GitLab instance</p>
+					<p><a href="https://about.gitlab.com/">https://about.gitlab.com/</a></p>
+			</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>The Payoff</h2>
+					<ul>
+						<li>Single Point of Truth for your project</li>
+						<li>Easy to share and deploy code</li>
+						<li>Rewind to any point in time</li>
+						<li>Everything is backed up by default</li>
+						<li>Can add automated tests later (Continuous integration)</li>
+						<li>Release management</li>
+						<li>Project management</li>
+						<li>Documentation</li>
+					</ul>
+			</section>
 			
 				<section data-background="background.png">
 				<h2 class='glow'>The version control life cycle</h2>
@@ -336,14 +356,6 @@ git push origin master</pre>
 					<li> we're not using git? I'm scared!
 					</ol>
 					<p>source: <a href="https://twitter.com/bobearth/status/571154995506122755">https://twitter.com/bobearth/status/571154995506122755</a> </p>
-		</section>
-
-		<section>
-		DIFFERENCE BETWEEN GITHUB,AND GIT.  MENTION GITLAB FOR SENSITIVE DATA
-		
-		RESOURCES FOR LEARNING GIT
-
-		ADD-ONS FOR GITHUB. CLOUD DEPLOYMENT. NOTEBOOK RENDERING. CI. AND SO ON
 		</section>
 
 		<section data-background="background.png">
@@ -387,14 +399,52 @@ git push origin master</pre>
 			</section>
 
 			<section data-background="background.png">
-				<p>Running our PCA example</p>
-				<p>You are told it works using scikit-learn 0.17></p>
+					<h2 class='glow'>Running our PCA example</h2>
+				<p>You are told it works using scikit-learn 0.17</p>
 				<code><pre>
 conda create --name pca_project python=3.5 scikit-learn=0.17 jupyter
 conda activate pca_project
 jupyter notebook</pre>
 				</code>
 			</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Running our PCA example</h2>
+				<p>Set up the exact environment I used</p>
+				<code>
+<pre>
+git clone https://github.com/mikecroucher/pca_demo
+cd pca_demo
+conda env create -f environment.yml
+conda activate old_scikit
+jupyter notebook</pre>
+</code>
+</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Need more?</h2>
+					<ul>
+						<li>Virtual machines</li>
+						<li class="fragment fade-in">Containerisation (Docker, Singularity etc)</li>
+						<li class="fragment fade-in"> FedEx your laptop</li>
+						
+					</ul>
+			</section>
+			
+
+			<section data-background="background.png">
+					<h2>Problem</h2>
+						<h3>I am an idiot and will make mistakes</h3>
+			
+					<p>(Partial) Solutions
+						<ul>
+							<li>Automate (aka learn to program)
+							<li>Write code in a (very) high-level language
+							<li>Share code and data
+							<li>Use version control
+							<li>Share your environment</li>
+						</ul>
+				</section>
 			
 
 			<section data-background="background.png">
@@ -414,10 +464,11 @@ jupyter notebook</pre>
 		
 			<p>(Partial) Solutions</p>
 				<ul>
-					<li>Automate (aka learn to program)
-					<li>Write code in a (very) high-level language
-					<li>Share code and data
-					<li>Use version control
+						<li>Automate (aka learn to program)
+								<li>Write code in a (very) high-level language
+								<li>Share code and data
+								<li>Use version control
+								<li>Share your environment</li>
 					<li>Get a code buddy
 				</ul>
 		</section>
@@ -452,12 +503,12 @@ jupyter notebook</pre>
 		
 					<p>(Partial) Solutions
 						<ul>
-							<li>Automate (aka learn to program)
-							<li>Write code in a (very) high-level language
-							<li>Get some training
-							<li>Use version control
-							<li>Get a code buddy 
-							<li>Share your code and data openly
+								<li>Automate (aka learn to program)
+										<li>Write code in a (very) high-level language
+										<li>Share code and data
+										<li>Use version control
+										<li>Share your environment</li>
+							<li>Get a code buddy
 							<li>Use literate computing technologies</li>
 						</ul>
 				</section>
@@ -492,7 +543,7 @@ jupyter notebook</pre>
 		
 					<section data-background="jdcook_tweet.png" data-background-size="contain">
 					</section>
-				</section>
+				
 		
 		<section data-background="background.png">
 				<h2>Problem</h2>
@@ -500,18 +551,18 @@ jupyter notebook</pre>
 		
 				<p>(Partial) Solutions
 					<ul>
-						<li>Automate (aka learn to program)
-						<li>Write code in a (very) high-level language
-						<li>Get some training
-						<li>Use version control
-						<li>Get a code buddy 
-						<li>Share your code and data openly
+							<li>Automate (aka learn to program)
+									<li>Write code in a (very) high-level language
+									<li>Share code and data
+									<li>Use version control
+									<li>Share your environment</li>
+						<li>Get a code buddy
 						<li>Use literate computing technologies</li>
 						<li>Write tests
 					</ul>
-			</section>
+		</section>
 		
-			<section data-background="background.png">
+		<section data-background="background.png">
 			<h2 class='glow'>Numerical Computing is hard!</h2>
 		 </section>
 
@@ -551,6 +602,20 @@ return max*sqrt(1 + r*r)
 
 			<section data-background="original_sin.png" data-background-size="contain"></section>
 			<section data-background="new_sin.png" data-background-size="contain">	</section>
+
+			<section data-background="dbscan.png" data-background-size="contain">	</section>
+
+			<section data-background="background.png">
+					<h2 class='glow'>Implementation details matter</h2>
+					<p>10,000+ times speed difference between worst and best of the same algorithm</p>
+					<p class="fragment fade-in">Which algorithms interest you the most?</p>
+					<p class="fragment fade-in">Tell me at:<ul>
+						<li class="fragment fade-in"> Michael.Croucher@nag.co.uk
+						<li class="fragment fade-in"><a href="https://www.linkedin.com/in/mike-croucher-32336113/">https://www.linkedin.com/in/mike-croucher-32336113/</a>
+						<li class="fragment fade-in"><a href="https://twitter.com/walkingrandomly">https://twitter.com/walkingrandomly</a> 
+						</ul></p>
+		    </section>
+
 
 			<section data-background="background.png">
 					<h2 class='glow'>Numerical Computing is hard!</h2>
@@ -601,14 +666,15 @@ return max*sqrt(1 + r*r)
 		
 				<p>(Partial) Solutions
 					<ul>
-						<li>Automate (aka learn to program)
-						<li>Write code in a (very) high-level language
-						<li>Get some training
-						<li>Use version control
-						<li>Get a code buddy 
-						<li>Share your code and data openly
-						<li>Use literate computing technologies</li>
-						<li>Write tests
+							<ul>
+								<li>Automate (aka learn to program)
+								<li>Write code in a (very) high-level language
+								<li>Share code and data
+								<li>Use version control
+								<li>Share your environment</li>
+								<li>Get a code buddy
+								<li>Use literate computing technologies</li>
+								<li>Write tests
 						<li>Use a quality numerical library</li>
 					</ul>
 			</section>
@@ -649,23 +715,6 @@ return max*sqrt(1 + r*r)
 				</section>
 				<section data-background="NAG_users.png" data-background-size="contain">
 				</section>
-				<section data-background="NAG_HPC_Services.png" data-background-size="contain">
-				</section>
-				<section data-background="NAG_PoP.png" data-background-size="contain">
-				</section>
-
-
-				<section data-background="background.png">
-					<h2>NAG - Some Academic Collaborations</h2>
-					<ul>
-						<li class="fragment fade-in">Your University (Your research)	
-						<li class="fragment fade-in">University of Oxford (Mathematical Optimisation)
-							<li class="fragment fade-in">University of Manchester (Accelerated Linear Algebra)
-						    <li class="fragment fade-in">University of Lancaster (wavelet models)			
-							<li class="fragment fade-in">University of Sheffield (ML - Clustering)
-							<li class="fragment fade-in">RWTH Aachen University (Algorithmic Differentiation)
-							<li class="fragment fade-in">QMUL (Implied Volatility)
-							
 							
 					</ul>
 				 </section>
@@ -674,7 +723,7 @@ return max*sqrt(1 + r*r)
 				</section>
 		
 					<section data-background="background.png">
-						Link to these slides: <a href="https://mikecroucher.github.io/NAG_IYRSC/">https://mikecroucher.github.io/NAG_IYRSC/</a>
+						Link to these slides: <a href="https://mikecroucher.github.io/reproducible_ML/">https://mikecroucher.github.io/reproducible_ML/</a>
 					</section>
 		
 					<section data-background="background.png">
@@ -725,7 +774,7 @@ return max*sqrt(1 + r*r)
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, history: true,callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, history: true,hash:true,slideNumber:true,callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
