@@ -4,7 +4,7 @@
 
 ## Slides
 
-The slides are in **presentation/index.html**. On your local macginem, Navigate to that folder and open index.html in a browser.  See the online version at https://mikecroucher.github.io/reproducible_ML/
+The slides are in **presentation/index.html**. On your local machine, Navigate to that folder and open index.html in a browser.  See the online version at https://mikecroucher.github.io/reproducible_ML/
 
 ## External resources
 
