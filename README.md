@@ -11,7 +11,7 @@ The slides are in **presentation/index.html**. On your local machine, Navigate t
 **GitHub Repos**
 
 * [PCA_demo](https://github.com/mikecroucher/pca_demo) The PCA demonstration used to motivate sharing of environments
-* [Bob's repo](https://github.com/mikecroucher/Bobs_code]) Repo created from the slide motivating the use of version control
+* [Bob's repo](https://github.com/mikecroucher/Bobs_code) Repo created from the slide motivating the use of version control
 
 **NAG Numerical Library**
 
