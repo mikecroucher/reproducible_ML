@@ -1,4 +1,4 @@
-# Reproducible data science
+# Is Your Research Software Correct?
 
 ![NAG Logo](./nag_logo.png)
 
