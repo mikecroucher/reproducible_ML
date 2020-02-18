@@ -15,7 +15,7 @@ The slides are in **presentation/index.html**. On your local machine, Navigate t
 
 **NAG Numerical Library**
 
-* [NAG Library for Python](https://www.nag.co.uk/nag-library-python)- All MLI delegates can have a free, personal-use license for one-year
+* [NAG Library for Python](https://www.nag.co.uk/nag-library-python)
 
 **Academic Papers**
 
