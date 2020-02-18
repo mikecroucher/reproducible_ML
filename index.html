@@ -29,7 +29,7 @@
 		<div class="reveal">
 			<div class="slides">
 					<section data-background="background.png">
-							<h2 class='glow'>Good enough practice in Data Science</h2>
+							<h2 class='glow'>Is Your Research Software Correct?</h2>
 		
 							<p>Mike Croucher</p>
 								<p>Numerical Algorithms Group</p>
@@ -175,7 +175,8 @@
 					</section>
 					<section data-background="background.png">
 						<h2>Why high level languages?</h2>
-						"Programmers write roughly the same number of lines of code per unit time regardless of the language they use" (Best Practices for Scientific Computing, PLOS Biology, Wilson Et Al)
+						"Programmers write roughly the same number of lines of code per unit time regardless of the language they use" 
+						<p>(Best Practices for Scientific Computing, PLOS Biology, Wilson Et Al)</p>
 					</section>
 					<section data-background="background.png">
 						<h2 class='glow'>What about speed?</h2>
@@ -284,21 +285,22 @@
 					</ul>
 				</section>
 				<section data-background="background.png">
-					<h2>Which version did the results come from?</h2>
-				</section>
-				<section data-background="background.png">
-					<h2>What broke the code?</h2>
-				</section>
-				<section data-background="background.png">
-					<h2>Team co-ordination</h2>
-				</section>
-				<section data-background="background.png">
-					<h2>Taking you back to your happy place</h2>
-				</section>
+					<h2 class='glow'>Why version control?</h2>
+					<ul>
+						<li>Single Point of Truth for your project</li>
+						<li>Easy to share and deploy code</li>
+						<li>Rewind to any point in time</li>
+						<li>Everything is backed up by default</li>
+						<li>Can add automated tests later (Continuous integration)</li>
+						<li>Release management</li>
+						<li>Project management</li>
+						<li>Documentation</li>
+						<li>Which version gave your results</li>
+					</ul>
+			</section>
 
 				<section data-background="background.png">
-					<h2 class='glow'>Still not convinced?</h2>
-					
+					<h2 class='glow'>More reasons?</h2>	
 					<a href="http://www.walkingrandomly.com/?p=6653"><img src="Academic_git.png"></a>
 			</section>
 
@@ -307,17 +309,7 @@
 					<h2>Demo</h2>
 					<p><a href="https://github.com/mikecroucher/Bobs_code">https://github.com/mikecroucher/Bobs_code</a></p>
 				</section>
-			<section data-background="background.png">
-				<h2 class='glow'>True Story </h2>
-				<ul>
-					<li class="fragment fade=in"> Me: Can I see the code please?
-					<li class="fragment fade=in"> Them: I'll just get the changes from Bob folded in and email it
-					<li class="fragment fade=in"> Me: Shouldn't we be using version control?
-					<li class="fragment fade=in"> Them: No need - it's overkill. We don't have a VC problem.
-					<li class="fragment fade=in"> Me: The code you sent me doesn't work
-					<li class="fragment fade=in"> Them: Sorry. I sent the wrong version.
-				</ul>
-			</section>
+			
 
 			<section data-background="background.png">
 					<h2 class='glow'>Use git!</h2>
@@ -341,20 +333,6 @@ git push origin master</pre>
 					<p>Speak to IT about installing an in-house GitLab instance</p>
 					<p><a href="https://about.gitlab.com/">https://about.gitlab.com/</a></p>
 			</section>
-
-			<section data-background="background.png">
-					<h2 class='glow'>The Payoff</h2>
-					<ul>
-						<li>Single Point of Truth for your project</li>
-						<li>Easy to share and deploy code</li>
-						<li>Rewind to any point in time</li>
-						<li>Everything is backed up by default</li>
-						<li>Can add automated tests later (Continuous integration)</li>
-						<li>Release management</li>
-						<li>Project management</li>
-						<li>Documentation</li>
-					</ul>
-			</section>
 			
 				<section data-background="background.png">
 				<h2 class='glow'>The version control life cycle</h2>
@@ -364,6 +342,18 @@ git push origin master</pre>
 					<li> we're not using git? I'm scared!
 					</ol>
 					<p>source: <a href="https://twitter.com/bobearth/status/571154995506122755">https://twitter.com/bobearth/status/571154995506122755</a> </p>
+		</section>
+
+		<section data-background="background.png">
+			<h2 class='glow'>True Story </h2>
+			<ul>
+				<li class="fragment fade=in"> Me: Can I see the code please?
+				<li class="fragment fade=in"> Them: I'll just get the changes from Bob folded in and email it
+				<li class="fragment fade=in"> Me: Shouldn't we be using version control?
+				<li class="fragment fade=in"> Them: No need - it's overkill. We don't have a VC problem.
+				<li class="fragment fade=in"> Me: The code you sent me doesn't work
+				<li class="fragment fade=in"> Them: Sorry. I sent the wrong version.
+			</ul>
 		</section>
 
 		<section data-background="background.png">
@@ -602,6 +592,7 @@ return max*sqrt(1 + r*r)
 		</section>
 
 		<section data-background="openlibm_hypot.png"></section>
+		<section data-background="hold_my_beer.png" data-background-size="contain"></section>
 		
 		<section data-background="background.png">
 				<h2 class='glow'>A story of sin(x)</h2>
@@ -611,18 +602,18 @@ return max*sqrt(1 + r*r)
 			<section data-background="original_sin.png" data-background-size="contain"></section>
 			<section data-background="new_sin.png" data-background-size="contain">	</section>
 
-			<section data-background="dbscan.png" data-background-size="contain">	</section>
-
 			<section data-background="background.png">
-					<h2 class='glow'>Implementation details matter</h2>
-					<p>10,000+ times speed difference between worst and best of the same algorithm</p>
-					<p class="fragment fade-in">Which algorithms interest you the most?</p>
-					<p class="fragment fade-in">Tell me at:<ul>
-						<li class="fragment fade-in"> Michael.Croucher@nag.co.uk
-						<li class="fragment fade-in"><a href="https://www.linkedin.com/in/mike-croucher-32336113/">https://www.linkedin.com/in/mike-croucher-32336113/</a>
-						<li class="fragment fade-in"><a href="https://twitter.com/walkingrandomly">https://twitter.com/walkingrandomly</a> 
-						</ul></p>
-		    </section>
+				<h2 class='glow'>Implementation details matter</h2>
+				<p>10,000+ times speed difference between worst and best of the same algorithm</p>
+				<p class="fragment fade-in">Which algorithms interest you the most?</p>
+				<p class="fragment fade-in">Tell me at:<ul>
+					<li class="fragment fade-in"> Michael.Croucher@nag.co.uk
+					<li class="fragment fade-in"><a href="https://www.linkedin.com/in/mike-croucher-32336113/">https://www.linkedin.com/in/mike-croucher-32336113/</a>
+					<li class="fragment fade-in"><a href="https://twitter.com/walkingrandomly">https://twitter.com/walkingrandomly</a> 
+					</ul></p>
+		</section>
+
+			<section data-background="dbscan.png" data-background-size="contain">	</section>
 
 
 			<section data-background="background.png">
@@ -683,9 +674,24 @@ return max*sqrt(1 + r*r)
 								<li>Get a code buddy
 								<li>Use literate computing technologies</li>
 								<li>Write tests
-						<li>Use a quality numerical library</li>
+						       <li>Use a quality numerical library</li>
 					</ul>
 			</section>
+
+		<section data-background="background.png">
+				<h2 class='glow'>Care about the code!</h2>
+				<p class="fragment fade-in">You will be promoted based on your academic paper output</p>
+				<p class="fragment fade-in">Your code and data is the engine that drives the papers</p>
+		</section>
+
+		<section data-background="background.png">
+			<h2 class='glow'>Care about the code!</h2>
+			<p class="fragment fade-in">Employ what you have learned here</p>
+			<p class="fragment fade-in">Make your code citable</p>
+			<p class="fragment fade-in">Seek advice (RSEs, NAG)</p>
+		</section>
+
+		<section data-background="hidden_ref.png"></section>
 		
 			<section data-background="background.png">
 			 <h2 class='glow'>Is this enough?</h2>
