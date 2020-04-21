@@ -17,11 +17,17 @@
 * [Make your code citable](https://guides.github.com/activities/citable-code/)
 * [Hidden REF](https://hidden-ref.org/) - There's more to research than papers but the UK's official measure, The Research Excellence Framework (REF), doesn't reflect this.  The Hidden REF aims to change that! 
 * [Research Software Engineers Associaton](https://rse.ac.uk/) - Supporting the people behind research software
+* [The Turing Way](https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science) - Guidelines on reproducible research from the Alan Turing Institute
 
 **Academic Papers mentioned in the presentation**
 
 * [The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://link.springer.com/article/10.1007/s10115-016-1004-2) - Demonstrating that the difference between the best and worst implementations of ML algorithms can be more than **10,000 times**. Even when only considering mature frameworks
 * [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
+
+**Coding problems leading to problems in research**
+
+* [The Excel error that changed history](https://www.bbc.co.uk/news/magazine-22223190)
+* [The effects of Operating system and software version on Neuroscience results](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0038234)
 
 ## Version Control - Learn git
 
@@ -33,7 +39,8 @@
 
 ## Distribute your computational environment, not just the code
 
-* [My Conda cheatsheet](./conda.md) - One way to do it in Python
+* [My Conda cheatsheet](./conda.md) - Conda: One way to do it in Python
+* [The MRAN](https://blog.revolutionanalytics.com/2019/05/cran-snapshots-and-you.html) - Daily snapshots of the R CRAN repository to allow you to version by date
 
 ## XKCD comics I used in the presentation
 
