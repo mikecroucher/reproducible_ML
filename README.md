@@ -41,6 +41,7 @@
 
 * [My Conda cheatsheet](./conda.md) - Conda: One way to do it in Python
 * [The MRAN](https://blog.revolutionanalytics.com/2019/05/cran-snapshots-and-you.html) - Daily snapshots of the R CRAN repository to allow you to version by date
+* [Docker and Mybinder](https://reproducible-analysis-workshop.readthedocs.io/en/latest/8.Intro-Docker.html) - Containerisation for reproducible research
 
 ## XKCD comics I used in the presentation
 
