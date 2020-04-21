@@ -57,3 +57,10 @@ Environment files contain full descriptions of environments and can be shared to
 
 * `conda env export > environment.yml` - Create `environment.yml` describing the currently active environment
 * `conda env create -f environment.yml` - Create an environment from the description in environment.yml
+
+### Note to self
+
+The way you push the `presentation` folder to gh-pages to make the slide deck live is
+```
+git subtree presentation --prefix dist origin gh-pages
+```
