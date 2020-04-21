@@ -19,7 +19,7 @@
 * [Research Software Engineers Associaton](https://rse.ac.uk/) - Supporting the people behind research software
 * [The Turing Way](https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science) - Guidelines on reproducible research from the Alan Turing Institute
 
-**Academic Papers mentioned in the presentation**
+**Academic Papers on reproducible research and software quality**
 
 * [The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://link.springer.com/article/10.1007/s10115-016-1004-2) - Demonstrating that the difference between the best and worst implementations of ML algorithms can be more than **10,000 times**. Even when only considering mature frameworks
 * [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
