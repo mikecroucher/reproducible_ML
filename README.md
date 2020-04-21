@@ -62,5 +62,5 @@ Environment files contain full descriptions of environments and can be shared to
 
 The way you push the `presentation` folder to gh-pages to make the slide deck live is
 ```
-git subtree presentation --prefix dist origin gh-pages
+git subtree push --prefix presentation origin gh-pages
 ```
