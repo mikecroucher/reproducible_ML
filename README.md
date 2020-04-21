@@ -2,9 +2,11 @@
 
 ![NAG Logo](./nag_logo.png)
 
-## Slides
+## Resources from this presentation
 
-The slides are in **presentation/index.html**. On your local machine, Navigate to that folder and open index.html in a browser.  See the online version at https://mikecroucher.github.io/reproducible_ML/
+* Slides: The slides are in **presentation/index.html**. On your local machine, Navigate to that folder and open `index.html` in a browser.  See the online version at https://mikecroucher.github.io/reproducible_ML/
+* [PCA_demo](https://github.com/mikecroucher/pca_demo) The PCA demonstration used to motivate sharing of environments
+* [Bob's repo](https://github.com/mikecroucher/Bobs_code) Repo created from the slide motivating the use of version control
 
 ## External resources
 
@@ -16,16 +18,7 @@ The slides are in **presentation/index.html**. On your local machine, Navigate t
 * [Hidden REF](https://hidden-ref.org/) - There's more to research than papers but the UK's official measure, The Research Excellence Framework (REF), doesn't reflect this.  The Hidden REF aims to change that! 
 * [Research Software Engineers Associaton](https://rse.ac.uk/) - Supporting the people behind research software
 
-**GitHub Repos from this presentation**
-
-* [PCA_demo](https://github.com/mikecroucher/pca_demo) The PCA demonstration used to motivate sharing of environments
-* [Bob's repo](https://github.com/mikecroucher/Bobs_code) Repo created from the slide motivating the use of version control
-
-**NAG Numerical Library**
-
-* [NAG Library for Python](https://www.nag.co.uk/nag-library-python)
-
-**Academic Papers**
+**Academic Papers mentioned in the presentation**
 
 * [The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://link.springer.com/article/10.1007/s10115-016-1004-2) - Demonstrating that the difference between the best and worst implementations of ML algorithms can be more than **10,000 times**. Even when only considering mature frameworks
 * [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
@@ -42,10 +35,16 @@ The slides are in **presentation/index.html**. On your local machine, Navigate t
 
 * [My Conda cheatsheet](./conda.md) - One way to do it in Python
 
-### XKCD comics I used in the presentation
+## XKCD comics I used in the presentation
 
 * [Time taken to automate](https://xkcd.com/1319/)
 * [Python lets you fly](https://xkcd.com/353/)
+
+**NAG Numerical Library**
+
+50 years of caring about algorithms from academia to industry.
+
+* [NAG Library for Python](https://www.nag.co.uk/nag-library-python)
 
 ### Note to self
 
