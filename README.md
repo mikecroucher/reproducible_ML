@@ -48,11 +48,12 @@
 * [Time taken to automate](https://xkcd.com/1319/)
 * [Python lets you fly](https://xkcd.com/353/)
 
-**NAG Numerical Library**
+**Numerical Algorithms Group**
 
 50 years of caring about algorithms from academia to industry.
 
 * [NAG Library for Python](https://www.nag.co.uk/nag-library-python)
+* [NAG Cloud HPC Migration Service](https://www.nag.com/content/nag-cloud-hpc-migration-service)
 
 ### Note to self
 
