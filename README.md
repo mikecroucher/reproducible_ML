@@ -1,7 +1,5 @@
 # Is Your Research Software Correct?
 
-![NAG Logo](./nag_logo.png)
-
 ## Resources from this presentation
 
 * Slides: The slides are in **presentation/index.html**. On your local machine, Navigate to that folder and open `index.html` in a browser.  See the online version at https://mikecroucher.github.io/reproducible_ML/
